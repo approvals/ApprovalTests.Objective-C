@@ -1,4 +1,4 @@
 ApprovalTests.Objective-C
 =========================
 
-Objective-C version for iOS
+Objective-C version for OSX
