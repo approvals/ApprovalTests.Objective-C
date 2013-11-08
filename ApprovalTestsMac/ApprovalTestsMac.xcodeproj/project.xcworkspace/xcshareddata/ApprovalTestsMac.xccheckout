@@ -5,43 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1561A72C-E21D-4F3E-9E8B-B1EA156A8384</string>
+	<string>143C8300-3549-4941-A1FD-D5F0711EC20E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ApprovalTestsMac</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0FA5E12C-515F-452A-870C-F52EE0B4592D</key>
-		<string>http://aaron.griffith.name/subversion/ios/HoopChamp/trunk</string>
+		<key>E4BF1447-4022-4297-9F79-2F7EA3A4CDDC</key>
+		<string>https://github.com/approvals/ApprovalTests.Objective-C.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ApprovalTestsMac/ApprovalTestsMac.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0FA5E12C-515F-452A-870C-F52EE0B4592D</key>
+		<key>E4BF1447-4022-4297-9F79-2F7EA3A4CDDC</key>
 		<string>../../..</string>
 	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>0FA5E12C-515F-452A-870C-F52EE0B4592D</key>
-		<string>http://aaron.griffith.name/subversion/ios/HoopChamp</string>
-	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://aaron.griffith.name/subversion/ios/HoopChamp/trunk/ApprovalTestsMac/ApprovalTestsMac.xcodeproj</string>
+	<string>https://github.com/approvals/ApprovalTests.Objective-C.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0FA5E12C-515F-452A-870C-F52EE0B4592D</string>
+	<string>E4BF1447-4022-4297-9F79-2F7EA3A4CDDC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>trunk</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0FA5E12C-515F-452A-870C-F52EE0B4592D</string>
+			<string>E4BF1447-4022-4297-9F79-2F7EA3A4CDDC</string>
 			<key>IDESourceControlWCCName</key>
-			<string>iOS Dev</string>
+			<string>ApprovalTests</string>
 		</dict>
 	</array>
 </dict>

@@ -14,14 +14,6 @@
 
 }
 - (bool)verifyFiles:(NSString *)approved_file :(NSString *)received_file :(id<Reporter>)reporter {
-//    def verify_files(self, approved_file, received_file, reporter):
-//    if self.are_files_the_same(approved_file, received_file):
-//        os.remove(received_file)
-//        return True
-//        
-//        reporter.report(approved_file, received_file)
-//        return False
-//
     NSFileManager *filemgr;
     
     filemgr = [NSFileManager defaultManager];

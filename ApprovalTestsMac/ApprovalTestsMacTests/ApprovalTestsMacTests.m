@@ -55,7 +55,16 @@
 {
     Namer *namer = [[Namer alloc] init];
     //NSLog([namer getDirectoryNameFromClass]);
-    XCTAssertEqualObjects(@"/Users/AaronGriffith/iOS Dev/ApprovalTestsMac/ApprovalTestsMacTests", [namer getDirectoryNameFromClass], @"This is the directory name");
+    NSString* filePath = [namer getDirectoryNameFromClass];
+    NSString* lastTwoPath;
+    
+    NSArray* pathComponents = [filePath pathComponents];
+    
+    if ([pathComponents count] > 2) {
+        NSArray* lastTwoArray = [pathComponents subarrayWithRange:NSMakeRange([pathComponents count]-2,2)];
+        lastTwoPath = [NSString pathWithComponents:lastTwoArray];
+    }
+    XCTAssertEqualObjects(@"ApprovalTestsMac/ApprovalTestsMacTests", lastTwoPath, @"This is the directory name");
 }
 
 
@@ -65,12 +74,19 @@
     // self.assertTrue(n.get_basename().endswith("\\NamerTests.test_basename"), n.get_basename())
     NSString *basenameLast =[[namer getBasename] lastPathComponent];
     basenameLast =[namer getBasename];
-    XCTAssertEqualObjects(basenameLast, @"/Users/AaronGriffith/iOS Dev/ApprovalTestsMac/ApprovalTestsMacTests/ApprovalTestsMacTests.testNamerGetBasename");
+   // NSString* filePath = basenameLast
+    NSString* lastThreePath;
+    
+    NSArray* pathComponents = [basenameLast pathComponents];
+    
+    if ([pathComponents count] > 3) {
+        NSArray* lastTwoArray = [pathComponents subarrayWithRange:NSMakeRange([pathComponents count]-3,3)];
+        lastThreePath = [NSString pathWithComponents:lastTwoArray];
+    }
+    XCTAssertEqualObjects(lastThreePath, @"ApprovalTestsMac/ApprovalTestsMacTests/ApprovalTestsMacTests.testNamerGetBasename");
+
+
 }
-
-
-
-
 
 
 - (void)testWritesFile
@@ -120,13 +136,6 @@
 
 - (void)testFileApproverCompareSameFiles
 {
-    //    def test_compare_same_files():
-    //    approver = FileApprover()
-    //    writer = StringWriter("a")
-    //    writer.write_received_file("a.txt")
-    //    shutil.copy("a.txt", "a_same.txt")
-    //    approver.verify_files("a.txt", "a_same.txt", None)
-    
     FileApprover *fa = [[FileApprover alloc]init];
     StringWriter *sw = [[StringWriter alloc] init];
     Namer *namer = [[Namer alloc] init];
@@ -140,12 +149,6 @@
 
 - (void)testFileApproverCompareDifferentFiles
 {
-    //    def test_compare_different_files(self):
-    //    approver = FileApprover()
-    //    reporter = TestingReporter()
-    //    approver.verify_files("a.txt", "b.txt", reporter)
-    //    self.assertTrue(reporter.called)
-    
     FileApprover *fa = [[FileApprover alloc]init];
     StringWriter *sw = [[StringWriter alloc] init];
     TestingReporter *tr = [[TestingReporter alloc]init];
@@ -160,12 +163,6 @@
 
 - (void)testFileApproverFull
 {
-    //    namer = Namer()
-    //    writer = StringWriter("b")
-    //    reporter = TestingReporter()
-    //    approver = FileApprover()
-    //    approver.verify(namer, writer, reporter)
-    //    self.assertTrue(reporter.called)
     FileApprover *fa = [[FileApprover alloc]init];
     Namer *namer = [[Namer alloc] init];
     StringWriter *sw = [[StringWriter alloc] init];
@@ -178,14 +175,6 @@
 
 - (void)testReturnsErrorWhenFilesAreDifferent
 {
-    //    def test_returns_error_when_files_are_different(self):
-    //    namer = Namer()
-    //    writer = StringWriter("b")
-    //    reporter = TestingReporter()
-    //    approver = FileApprover()
-    //    error = approver.verify(namer, writer, reporter)
-    //    self.assertEqual("Approval Mismatch", error)
-    
     FileApprover *fa = [[FileApprover alloc]init];
     Namer *namer = [[Namer alloc] init];
     StringWriter *sw = [[StringWriter alloc] init];
@@ -197,20 +186,10 @@
 }
 - (void)testReturnsNilWhenFilesAreSame
 {
-    //def test_returns_none_when_files_are_same_files(self):
-    //namer = Namer()
-    //writer = StringWriter("b")
-    //reporter = ReceivedFileLauncherReporter()
-    //approver = FileApprover()
-    //error = approver.verify(namer, writer, reporter)
-    //self.assertEqual(None, error)
-    
     FileApprover *fa = [[FileApprover alloc]init];
     Namer *namer = [[Namer alloc] init];
     StringWriter *sw = [[StringWriter alloc] init];
-    
-    //replace b.txt with namer name
-     NSString *target = [NSString stringWithFormat:@"%@/%@", [namer getDirectoryNameFromClass] , [namer getClassNameFromClass]];
+    NSString *target = [NSString stringWithFormat:@"%@/%@", [namer getDirectoryNameFromClass] , [namer getClassNameFromClass]];
     [sw WriteReceivedFile:target:[namer getBasename] :@"b text content"];
     ReceivedFileLauncherReporter *reporter = [[ReceivedFileLauncherReporter alloc]init];
     NSString *error = [fa verify:namer :sw :reporter];
