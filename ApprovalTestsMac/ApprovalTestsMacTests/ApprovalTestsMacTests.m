@@ -204,10 +204,7 @@
 }
 
 - (void)testVerify{
-//def test_verify():
-//verify("Hello World.")
     [Approvals verify:@"Hellow World"];
-    
 }
 
 

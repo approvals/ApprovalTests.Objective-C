@@ -19,13 +19,9 @@
 }
 
 - (NSString *)WriteReceivedFile:(NSString *)name :(NSString *)path :(NSString *)contents{
-//    if([path hasSuffix:@":"])
-//    {
-//        path = [path substringToIndex:[path length] - 1];
-//    }
     NSString *filePath = [path stringByAppendingPathComponent:nil];
     
-    filePath = [self GetReceivedFileName:path :nil];
+    filePath = [self GetReceivedFileName:path :name];
     [contents writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
     return filePath;
 }
