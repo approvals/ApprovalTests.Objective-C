@@ -12,6 +12,7 @@
 #import "FileApprover.h"
 #import "TestingReporter.h"
 #import "ReceivedFileLauncherReporter.h"
+#import "Approvals.h"
 
 @interface ApprovalTestsMacTests : XCTestCase
 
@@ -109,6 +110,8 @@
         NSLog(@"Unable to delete file: %@", [error localizedDescription]);
     NSLog(@"Test Class location: %@",
           [fileMgr contentsOfDirectoryAtPath:homeDir error:&error]);
+    //file://localhost/Users/AaronGriffith/GitHubProjects/Approvals/ApprovalTests.Objective-C/ApprovalTestsMac/ApprovalTestsMacTests/ApprovalTestsMacTests.m: test failure: -[ApprovalTestsMacTests testWritesFile] failed: ((contents) equal to (txtInFile)) failed: ("foo33") is not equal to ("(null)") - This is the received file name
+
 }
 
 - (void)testWriterRecievedName
@@ -194,11 +197,18 @@
     ReceivedFileLauncherReporter *reporter = [[ReceivedFileLauncherReporter alloc]init];
     NSString *error = [fa verify:namer :sw :reporter];
     XCTAssertEqualObjects(@"none", error);
+//file://localhost/Users/AaronGriffith/GitHubProjects/Approvals/ApprovalTests.Objective-C/ApprovalTestsMac//ApprovalTestsMacTests/ApprovalTestsMacTests.m: test failure: -[ApprovalTestsMacTests testReturnsNilWhenFilesAreSame] failed: ((@"none") equal to (error)) failed: ("none") is not equal to ("Approval Mismatch")
+
 
 
 }
 
-
+- (void)testVerify{
+//def test_verify():
+//verify("Hello World.")
+    [Approvals verify:@"Hellow World"];
+    
+}
 
 
 

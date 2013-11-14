@@ -85,6 +85,10 @@
         methodName = substringsArray[1];
     }
     baseName = [NSString stringWithFormat:@"%@/%@.%@", [[NSString stringWithFormat:@"%s", __FILE__] stringByDeletingLastPathComponent], className,methodName];
+    if([baseName hasSuffix:@":"])
+    {
+        baseName = [baseName substringToIndex:[baseName length] - 1];
+    }
     return baseName;
 }
 
