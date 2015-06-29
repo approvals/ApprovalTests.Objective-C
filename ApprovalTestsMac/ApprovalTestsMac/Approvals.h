@@ -9,5 +9,5 @@
 
 
 @interface Approvals : NSObject
-+ (void)verify:(NSString *)data;
++ (void)verify:(NSString *)contents;
 @end

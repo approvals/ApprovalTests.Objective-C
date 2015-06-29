@@ -13,47 +13,34 @@
 }
 @synthesize baseName;
 
-- (NSString*)getClassNameFromClass{
-    void *addr[2];
-    int nframes = backtrace(addr, sizeof(addr)/sizeof(*addr));
-    if (nframes > 1) {
-        char **syms = backtrace_symbols(addr, nframes);
-        NSLog(@"%s: caller: %s", __func__, syms[1]);
-        
-        NSString * source = [NSString stringWithFormat:@"%s", syms[1]];
-        free(syms);
-        NSRange start = [source rangeOfString:@"["];
-        NSRange end = [source rangeOfString:@"]"];
-        NSInteger _length = end.location - start.location - 1;
-        NSString *substring = [source substringWithRange:NSMakeRange(start.location+1, _length)];
-        NSArray *substringsArray = [substring componentsSeparatedByString: @" "];
-        return substringsArray[0];
-    } else {
-        NSLog(@"%s: *** Failed to generate backtrace.", __func__);
-    }
-    return @"suck it, Trebek!";
+- (NSArray*)parseCaller:(NSString* )nameSource{
+    NSRange start = [nameSource rangeOfString:@"["];
+    NSRange end = [nameSource rangeOfString:@"]"];
+    NSInteger _length = end.location - start.location - 1;
+    NSString *substring = [nameSource substringWithRange:NSMakeRange(start.location+1, _length)];
+    NSArray *substringsArray = [substring componentsSeparatedByString: @" "];
+    return substringsArray;
 }
 
-- (NSString*)getMethodNameFromMethod{
-    
-    void *addr[2];
-    int nframes = backtrace(addr, sizeof(addr)/sizeof(*addr));
-    if (nframes > 1) {
+
+- (NSArray*)getCallerAt:(int)depth{
+    void *addr[depth + 1];
+    int nframes = backtrace(addr, (int)sizeof(addr)/sizeof(*addr));
+    if (nframes > depth) {
         char **syms = backtrace_symbols(addr, nframes);
-        NSLog(@"%s: caller: %s", __func__, syms[1]);
-        
-        NSString * source = [NSString stringWithFormat:@"%s", syms[1]];
+        NSString * source = [NSString stringWithFormat:@"%s", syms[depth]];
         free(syms);
-        NSRange start = [source rangeOfString:@"["];
-        NSRange end = [source rangeOfString:@"]"];
-        NSInteger _length = end.location - start.location - 1;
-        NSString *substring = [source substringWithRange:NSMakeRange(start.location+1, _length)];
-        NSArray *substringsArray = [substring componentsSeparatedByString: @" "];
-        return substringsArray[1];
-    } else {
-        NSLog(@"%s: *** Failed to generate backtrace.", __func__);
+        return [self parseCaller: source];
     }
-    return @"suck it, Trebek!";
+    return nil;
+}
+
+- (NSString*)getClassNameFromClass:(int) depth{
+    return [self getCallerAt:depth][0];
+}
+
+- (NSString*)getMethodNameFromMethod:(int) depth{
+    return [self getCallerAt:depth][1];
 }
 
 - (NSString*)getDirectoryNameFromClass{
@@ -61,30 +48,12 @@
 }
 
 
-- (NSString*)getBasename{
-    NSString *className;
-    NSString *methodName;
-    void *addr[2];
-    int nframes = backtrace(addr, sizeof(addr)/sizeof(*addr));
-    if (nframes > 1) {
-        char **syms = backtrace_symbols(addr, nframes);
-        NSLog(@"%s: caller: %s", __func__, syms[1]);
-        
-        NSString * source = [NSString stringWithFormat:@"%s", syms[1]];
-        NSLog(@"%s", syms[0]);
-        NSLog(@"%s", syms[1]);
-       // NSLog(@"%s", syms[2]);
-
-        free(syms);
-        NSRange start = [source rangeOfString:@"["];
-        NSRange end = [source rangeOfString:@"]"];
-        NSInteger _length = end.location - start.location - 1;
-        NSString *substring = [source substringWithRange:NSMakeRange(start.location+1, _length)];
-        NSArray *substringsArray = [substring componentsSeparatedByString: @" "];
-        className = substringsArray[0];
-        methodName = substringsArray[1];
-    }
-    baseName = [NSString stringWithFormat:@"%@/%@.%@", [[NSString stringWithFormat:@"%s", __FILE__] stringByDeletingLastPathComponent], className,methodName];
+- (NSString*)getBasename:(int) depth{
+    NSString *directoryName = [[NSString stringWithFormat:@"%s", __FILE__] stringByDeletingLastPathComponent];
+    NSString *className = [self getClassNameFromClass:depth];
+    NSString *methodName = [self getMethodNameFromMethod:depth];
+    baseName = [NSString stringWithFormat:@"%@/%@.%@", directoryName, className,methodName];
+    
     while([baseName hasSuffix:@":"])
     {
         baseName = [baseName substringToIndex:[baseName length] - 1];

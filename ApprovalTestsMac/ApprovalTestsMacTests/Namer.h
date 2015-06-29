@@ -13,11 +13,16 @@
 
 @property (nonatomic, retain) NSString *baseName;
 
-- (NSString*)getClassNameFromClass;
+- (NSString*)getClassNameFromClass:(int) depth;
 
-- (NSString*)getMethodNameFromMethod;
+- (NSString*)getMethodNameFromMethod:(int) depth;
 
 - (NSString*)getDirectoryNameFromClass;
 
-- (NSString*)getBasename;
+- (NSString*)getBasename:(int) depth;
+
+- (NSArray*)parseCaller:(NSString* )nameSource;
+
+
+
 @end

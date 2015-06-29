@@ -11,26 +11,25 @@
 
 }
 
-- (NSString *)GetReceivedFileName:(NSString *)fileName :(NSString *)basename {
-    if (basename.length==0) {
-        basename = @".txt";
+- (NSString *)GetReceivedFileName:(NSString *)baseName :(NSString *)extension {
+    if (extension.length==0) {
+        extension = @".txt";
     }
-    return [NSString stringWithFormat:@"%@.received%@", fileName, basename];
+    return [NSString stringWithFormat:@"%@.received%@", baseName, extension];
 }
 
-- (NSString *)WriteReceivedFile:(NSString *)name :(NSString *)path :(NSString *)contents{
-    NSString *filePath = [path stringByAppendingPathComponent:nil];
-    
-    filePath = [self GetReceivedFileName:path :name];
+
+- (NSString *)WriteReceivedFile:(NSString *)baseName :(NSString *)contents{
+    NSString *filePath = [self GetReceivedFileName:baseName :@""];
     [contents writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
     return filePath;
 }
 
-- (NSString *)GetApprovedFileName:(NSString *)fileName :(NSString *)basename {
-    if (basename.length==0) {
-        basename = @".txt";
+- (NSString *)GetApprovedFileName:(NSString *)baseName :(NSString *)extension {
+    if (extension.length==0) {
+        extension = @".txt";
     }
-    return [NSString stringWithFormat:@"%@.approved%@", fileName, basename];
+    return [NSString stringWithFormat:@"%@.approved%@", baseName, extension];
 }
 
 

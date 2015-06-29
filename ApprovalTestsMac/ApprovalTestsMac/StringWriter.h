@@ -8,9 +8,9 @@
 
 
 @interface StringWriter : NSObject
-- (NSString *)GetReceivedFileName:(NSString *)fileName :(NSString *)basename;
+- (NSString *)GetReceivedFileName:(NSString *)baseName :(NSString *)extension;
 
-- (NSString *)WriteReceivedFile:(NSString *)name :(NSString *)path :(NSString *)contents;
+- (NSString *)WriteReceivedFile:(NSString *)baseName :(NSString *)contents;
 
-- (NSString *)GetApprovedFileName:(NSString *)fileName :(NSString *)basename;
+- (NSString *)GetApprovedFileName:(NSString *)baseName :(NSString *)extension;
 @end

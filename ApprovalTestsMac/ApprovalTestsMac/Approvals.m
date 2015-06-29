@@ -13,18 +13,16 @@
 
 
 @implementation Approvals {
-    
-
-
 }
 
-+ (void)verify:(NSString *)data{
++ (void)verify:(NSString *)contents{
+    
     FileApprover *approver = [[FileApprover alloc]init];
     Namer *namer = [[Namer alloc] init];
+    NSString* baseName = [namer getBasename:4];
     ReceivedFileLauncherReporter *reporter = [[ReceivedFileLauncherReporter alloc]init];
     StringWriter *writer = [[StringWriter alloc] init];
-    NSString *target = [NSString stringWithFormat:@"%@/%@", [namer getDirectoryNameFromClass] , [namer getClassNameFromClass]];
-    [writer WriteReceivedFile:target:[namer getBasename] :data];
+    [writer WriteReceivedFile:baseName :contents];
     [approver verify:namer :writer :reporter];
 }
 

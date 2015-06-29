@@ -10,31 +10,31 @@
 	<string>ApprovalTestsMac</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E4BF1447-4022-4297-9F79-2F7EA3A4CDDC</key>
+		<key>4EDD360AD04C78B70CAEB88069AE28274DCB9DC7</key>
 		<string>https://github.com/approvals/ApprovalTests.Objective-C.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ApprovalTestsMac/ApprovalTestsMac.xcodeproj/project.xcworkspace</string>
+	<string>ApprovalTestsMac/ApprovalTestsMac.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E4BF1447-4022-4297-9F79-2F7EA3A4CDDC</key>
+		<key>4EDD360AD04C78B70CAEB88069AE28274DCB9DC7</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/approvals/ApprovalTests.Objective-C.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E4BF1447-4022-4297-9F79-2F7EA3A4CDDC</string>
+	<string>4EDD360AD04C78B70CAEB88069AE28274DCB9DC7</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E4BF1447-4022-4297-9F79-2F7EA3A4CDDC</string>
+			<string>4EDD360AD04C78B70CAEB88069AE28274DCB9DC7</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ApprovalTests</string>
+			<string>ApprovalTests.Objective-C</string>
 		</dict>
 	</array>
 </dict>
