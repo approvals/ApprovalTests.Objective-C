@@ -38,16 +38,6 @@
 
 - (NSString *)verify:(Namer *)namer :(StringWriter *)writer :(id<Reporter>)report
 {
-
-    
-//    def verify(self, namer, writer, reporter):
-//    base = namer.get_basename()
-//    approved = writer.GetApprovedFileName(base)
-//    received = writer.write_received_file(writer.GetReceivedFileName(base))
-//    ok = self.verify_files(approved, received, reporter)
-//    if not ok:
-//        return "Approval Mismatch"
-//        return None
     NSString *base = namer.baseName;
     NSString *approved = [writer GetApprovedFileName:base :nil];
     NSString *received = [writer GetReceivedFileName:base :nil];

@@ -12,6 +12,7 @@
 #import "FileApprover.h"
 #import "TestingReporter.h"
 #import "ReceivedFileLauncherReporter.h"
+#import "KaleidoscopeReporter.h"
 #import "Approvals.h"
 
 @interface ApprovalTestsMacTests : XCTestCase
@@ -175,8 +176,19 @@
     XCTAssertEqualObjects(@"none", error);
 }
 
+- (void)testKaleidoscopeReporter
+{
+    FileApprover *fa = [[FileApprover alloc]init];
+    Namer *namer = [[Namer alloc] init];
+    StringWriter *sw = [[StringWriter alloc] init];
+    [sw WriteReceivedFile:[namer getBasename:3] :@"kaleidoscope text content"];
+    KaleidoscopeReporter *reporter = [[KaleidoscopeReporter alloc]init];
+    NSString *error = [fa verify:namer :sw :reporter];
+    XCTAssertEqualObjects(@"none", error);
+}
+
 - (void)testVerify{
-    [Approvals verify:@"Hello World"];
+    [Approvals verify:@"Hellowwwww World"];
 }
 
 

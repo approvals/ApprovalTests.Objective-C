@@ -8,6 +8,7 @@
 #import "Approvals.h"
 #import "Namer.h"
 #import "ReceivedFileLauncherReporter.h"
+#import "KaleidoscopeReporter.h"
 #import "StringWriter.h"
 #import "FileApprover.h"
 
@@ -21,9 +22,15 @@
     Namer *namer = [[Namer alloc] init];
     NSString* baseName = [namer getBasename:4];
     ReceivedFileLauncherReporter *reporter = [[ReceivedFileLauncherReporter alloc]init];
+    //KaleidoscopeReporter *reporter = [[KaleidoscopeReporter alloc]init];
     StringWriter *writer = [[StringWriter alloc] init];
     [writer WriteReceivedFile:baseName :contents];
-    [approver verify:namer :writer :reporter];
+    NSString *error = [approver verify:namer :writer :reporter];
+    if ([error isEqualToString:@"none"]) {
+        return;
+    }
+    NSException *exception = [NSException exceptionWithName:@"error" reason:@"error reason" userInfo:nil];
+    @throw exception;
 }
 
 @end
