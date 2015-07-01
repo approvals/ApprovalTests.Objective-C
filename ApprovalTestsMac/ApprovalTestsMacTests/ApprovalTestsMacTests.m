@@ -14,6 +14,7 @@
 #import "ReceivedFileLauncherReporter.h"
 #import "KaleidoscopeReporter.h"
 #import "BeyondCompareReporter.h"
+#import "AraxisMergeReporter.h"
 #import "Approvals.h"
 
 @interface ApprovalTestsMacTests : XCTestCase
@@ -213,6 +214,26 @@
     [defaults setObject:@"BEYONDCOMPARE" forKey:@"diffReporter"];
     [defaults synchronize];
     [Approvals verify:@"Beyond Compare Reporter test with NSUserDefaults"];
+}
+
+
+- (void)testAraxisMergeReporter
+{
+    FileApprover *fa = [[FileApprover alloc]init];
+    Namer *namer = [[Namer alloc] init];
+    StringWriter *sw = [[StringWriter alloc] init];
+    [sw WriteReceivedFile:[namer getBasename:3] :@"araxis merge text content"];
+    AraxisMergeReporter *reporter = [[AraxisMergeReporter alloc]init];
+    NSString *error = [fa verify:namer :sw :reporter];
+    XCTAssertEqualObjects(@"none", error);
+}
+
+- (void)testAraxisMergeReporterWithUserDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"ARAXISMERGE" forKey:@"diffReporter"];
+    [defaults synchronize];
+    [Approvals verify:@"Araxis Merge Reporter test with NSUserDefaults"];
 }
 
 - (void)testVerify{

@@ -10,6 +10,7 @@
 #import "ReceivedFileLauncherReporter.h"
 #import "KaleidoscopeReporter.h"
 #import "BeyondCompareReporter.h"
+#import "AraxisMergeReporter.h"
 #import "StringWriter.h"
 #import "FileApprover.h"
 
@@ -33,6 +34,10 @@
     if([firstName isEqualToString:@"BEYONDCOMPARE"])
     {
         reporter = [[BeyondCompareReporter alloc]init];
+    }
+    if([firstName isEqualToString:@"ARAXISMERGE"])
+    {
+        reporter = [[AraxisMergeReporter alloc]init];
     }
     StringWriter *writer = [[StringWriter alloc] init];
     [writer WriteReceivedFile:baseName :contents];

@@ -10,6 +10,7 @@
 		7F9FAB0BC416C3994CEE6450 /* Approvals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9FA1608D15D6AF26A7432D /* Approvals.m */; };
 		E7DB1F431B40C8CC00C90402 /* KaleidoscopeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB1F421B40C8CC00C90402 /* KaleidoscopeReporter.m */; };
 		E7EA082B1B4386ED00F17239 /* BeyondCompareReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA082A1B4386ED00F17239 /* BeyondCompareReporter.m */; };
+		E7EA082E1B443CF000F17239 /* AraxisMergeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA082D1B443CF000F17239 /* AraxisMergeReporter.m */; };
 		E7F50CA8182198DA0081331E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F50CA7182198DA0081331E /* Cocoa.framework */; };
 		E7F50CB2182198DA0081331E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7F50CB0182198DA0081331E /* InfoPlist.strings */; };
 		E7F50CB4182198DA0081331E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F50CB3182198DA0081331E /* main.m */; };
@@ -45,6 +46,8 @@
 		E7DB1F441B40C8F400C90402 /* KaleidoscopeReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaleidoscopeReporter.h; sourceTree = "<group>"; };
 		E7EA08291B4386ED00F17239 /* BeyondCompareReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeyondCompareReporter.h; sourceTree = "<group>"; };
 		E7EA082A1B4386ED00F17239 /* BeyondCompareReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeyondCompareReporter.m; sourceTree = "<group>"; };
+		E7EA082C1B443CF000F17239 /* AraxisMergeReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AraxisMergeReporter.h; sourceTree = "<group>"; };
+		E7EA082D1B443CF000F17239 /* AraxisMergeReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AraxisMergeReporter.m; sourceTree = "<group>"; };
 		E7F50CA4182198DA0081331E /* ApprovalTestsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApprovalTestsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F50CA7182198DA0081331E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E7F50CAA182198DA0081331E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -140,6 +143,8 @@
 		E7F50CAD182198DA0081331E /* ApprovalTestsMac */ = {
 			isa = PBXGroup;
 			children = (
+				E7EA082C1B443CF000F17239 /* AraxisMergeReporter.h */,
+				E7EA082D1B443CF000F17239 /* AraxisMergeReporter.m */,
 				7F9FA812C395A817A680991B /* Approvals.h */,
 				7F9FA1608D15D6AF26A7432D /* Approvals.m */,
 				E7F50CE8182199D80081331E /* Namer.h */,
@@ -300,6 +305,7 @@
 				E7F50CE6182199C90081331E /* StringWriter.m in Sources */,
 				E7F50CE7182199C90081331E /* TestingReporter.m in Sources */,
 				E7F50CBB182198DA0081331E /* AppDelegate.m in Sources */,
+				E7EA082E1B443CF000F17239 /* AraxisMergeReporter.m in Sources */,
 				E7F50CE5182199C90081331E /* ReceivedFileLauncherReporter.m in Sources */,
 				E7F50CE4182199C90081331E /* FileApprover.m in Sources */,
 				E7F50CB4182198DA0081331E /* main.m in Sources */,
