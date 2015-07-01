@@ -11,6 +11,7 @@
 #import "KaleidoscopeReporter.h"
 #import "BeyondCompareReporter.h"
 #import "AraxisMergeReporter.h"
+#import "P4MergeReporter.h"
 #import "StringWriter.h"
 #import "FileApprover.h"
 
@@ -38,6 +39,10 @@
     if([firstName isEqualToString:@"ARAXISMERGE"])
     {
         reporter = [[AraxisMergeReporter alloc]init];
+    }
+    if([firstName isEqualToString:@"P4MERGE"])
+    {
+        reporter = [[P4MergeReporter alloc]init];
     }
     StringWriter *writer = [[StringWriter alloc] init];
     [writer WriteReceivedFile:baseName :contents];

@@ -15,6 +15,7 @@
 #import "KaleidoscopeReporter.h"
 #import "BeyondCompareReporter.h"
 #import "AraxisMergeReporter.h"
+#import "P4MergeReporter.h"
 #import "Approvals.h"
 
 @interface ApprovalTestsMacTests : XCTestCase
@@ -26,6 +27,7 @@
 - (void)setUp
 {
     [super setUp];
+
 }
 
 - (void)tearDown
@@ -216,7 +218,6 @@
     [Approvals verify:@"Beyond Compare Reporter test with NSUserDefaults"];
 }
 
-
 - (void)testAraxisMergeReporter
 {
     FileApprover *fa = [[FileApprover alloc]init];
@@ -234,6 +235,25 @@
     [defaults setObject:@"ARAXISMERGE" forKey:@"diffReporter"];
     [defaults synchronize];
     [Approvals verify:@"Araxis Merge Reporter test with NSUserDefaults"];
+}
+
+- (void)testP4MergeReporter
+{
+    FileApprover *fa = [[FileApprover alloc]init];
+    Namer *namer = [[Namer alloc] init];
+    StringWriter *sw = [[StringWriter alloc] init];
+    [sw WriteReceivedFile:[namer getBasename:3] :@"p4merge text content"];
+    P4MergeReporter *reporter = [[P4MergeReporter alloc]init];
+    NSString *error = [fa verify:namer :sw :reporter];
+    XCTAssertEqualObjects(@"none", error);
+}
+
+- (void)testP4MergeReporterWithUserDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"P4MERGE" forKey:@"diffReporter"];
+    [defaults synchronize];
+    [Approvals verify:@"P4Merge Reporter test with NSUserDefaults"];
 }
 
 - (void)testVerify{
