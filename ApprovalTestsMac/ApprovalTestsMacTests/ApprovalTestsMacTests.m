@@ -16,6 +16,7 @@
 #import "BeyondCompareReporter.h"
 #import "AraxisMergeReporter.h"
 #import "P4MergeReporter.h"
+#import "DiffMergeReporter.h"
 #import "Approvals.h"
 
 @interface ApprovalTestsMacTests : XCTestCase
@@ -254,6 +255,25 @@
     [defaults setObject:@"P4MERGE" forKey:@"diffReporter"];
     [defaults synchronize];
     [Approvals verify:@"P4Merge Reporter test with NSUserDefaults"];
+}
+
+- (void)testDiffMergeReporter
+{
+    FileApprover *fa = [[FileApprover alloc]init];
+    Namer *namer = [[Namer alloc] init];
+    StringWriter *sw = [[StringWriter alloc] init];
+    [sw WriteReceivedFile:[namer getBasename:3] :@"diffmerge text content"];
+    DiffMergeReporter *reporter = [[DiffMergeReporter alloc]init];
+    NSString *error = [fa verify:namer :sw :reporter];
+    XCTAssertEqualObjects(@"none", error);
+}
+
+- (void)testDiffMergeReporterWithUserDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"DIFFMERGE" forKey:@"diffReporter"];
+    [defaults synchronize];
+    [Approvals verify:@"DiffMerge Reporter test with NSUserDefaults"];
 }
 
 - (void)testVerify{
