@@ -30,6 +30,20 @@
     }
     else
     {
+        // Begin of code that seems like it should be in a better place, or even in a better way, for that matter
+        NSString *txtInApprovedFile = [[NSString alloc] initWithContentsOfFile:approved_file encoding:NSUTF8StringEncoding error:nil];
+        txtInApprovedFile = [txtInApprovedFile stringByTrimmingCharactersInSet:
+                             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        NSString *txtInReceivedFile = [[NSString alloc] initWithContentsOfFile:received_file encoding:NSUTF8StringEncoding error:nil];
+        txtInReceivedFile = [txtInReceivedFile stringByTrimmingCharactersInSet:
+                             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        if ([txtInApprovedFile isEqualToString:txtInReceivedFile]) {
+            NSLog (@"File contents match");
+            return true;
+        }
+        //  End of code that makes me want to shower.
         NSLog (@"File contents do not match");
         [reporter report:approved_file :received_file];
         return false;
@@ -48,7 +62,6 @@
     else{
         return @"none";
     }
-    
 }
 
 

@@ -13,6 +13,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"DEFAULT" forKey:@"diffReporter"];
+    [defaults synchronize];
 }
 
 @end

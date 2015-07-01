@@ -13,6 +13,7 @@
 #import "TestingReporter.h"
 #import "ReceivedFileLauncherReporter.h"
 #import "KaleidoscopeReporter.h"
+#import "BeyondCompareReporter.h"
 #import "Approvals.h"
 
 @interface ApprovalTestsMacTests : XCTestCase
@@ -187,7 +188,36 @@
     XCTAssertEqualObjects(@"none", error);
 }
 
+- (void)testKaleidoscopeReporterWithUserDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"KALEIDOSCOPE" forKey:@"diffReporter"];
+    [defaults synchronize];
+    [Approvals verify:@"Kaleidoscope Reporter test with NSUserDefaults"];
+}
+
+- (void)testBeyondCompareReporter
+{
+    FileApprover *fa = [[FileApprover alloc]init];
+    Namer *namer = [[Namer alloc] init];
+    StringWriter *sw = [[StringWriter alloc] init];
+    [sw WriteReceivedFile:[namer getBasename:3] :@"beyond compare text content"];
+    BeyondCompareReporter *reporter = [[BeyondCompareReporter alloc]init];
+    NSString *error = [fa verify:namer :sw :reporter];
+    XCTAssertEqualObjects(@"none", error);
+}
+
+- (void)testBeyondCompareReporterWithUserDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"BEYONDCOMPARE" forKey:@"diffReporter"];
+    [defaults synchronize];
+    [Approvals verify:@"Beyond Compare Reporter test with NSUserDefaults"];
+}
+
 - (void)testVerify{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
     [Approvals verify:@"Hellowwwww World"];
 }
 
