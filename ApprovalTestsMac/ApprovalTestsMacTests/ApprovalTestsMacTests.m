@@ -17,6 +17,7 @@
 #import "AraxisMergeReporter.h"
 #import "P4MergeReporter.h"
 #import "DiffMergeReporter.h"
+#import "DeltaWalkerReporter.h"
 #import "Approvals.h"
 
 @interface ApprovalTestsMacTests : XCTestCase
@@ -274,6 +275,25 @@
     [defaults setObject:@"DIFFMERGE" forKey:@"diffReporter"];
     [defaults synchronize];
     [Approvals verify:@"DiffMerge Reporter test with NSUserDefaults"];
+}
+
+- (void)testDeltaWalkerReporter
+{
+    FileApprover *fa = [[FileApprover alloc]init];
+    Namer *namer = [[Namer alloc] init];
+    StringWriter *sw = [[StringWriter alloc] init];
+    [sw WriteReceivedFile:[namer getBasename:3] :@"deltawalker text content"];
+    DeltaWalkerReporter *reporter = [[DeltaWalkerReporter alloc]init];
+    NSString *error = [fa verify:namer :sw :reporter];
+    XCTAssertEqualObjects(@"none", error);
+}
+
+- (void)testDeltaWalkerReporterWithUserDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"DELTAWALKER" forKey:@"diffReporter"];
+    [defaults synchronize];
+    [Approvals verify:@"DeltaWalker Reporter test with NSUserDefaults"];
 }
 
 - (void)testVerify{

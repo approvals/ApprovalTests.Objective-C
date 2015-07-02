@@ -13,6 +13,7 @@
 #import "AraxisMergeReporter.h"
 #import "P4MergeReporter.h"
 #import "DiffMergeReporter.h"
+#import "DeltaWalkerReporter.h"
 #import "StringWriter.h"
 #import "FileApprover.h"
 
@@ -48,6 +49,10 @@
     if([firstName isEqualToString:@"DIFFMERGE"])
     {
         reporter = [[DiffMergeReporter alloc]init];
+    }
+    if([firstName isEqualToString:@"DELTAWALKER"])
+    {
+        reporter = [[DeltaWalkerReporter alloc]init];
     }
     StringWriter *writer = [[StringWriter alloc] init];
     [writer WriteReceivedFile:baseName :contents];
