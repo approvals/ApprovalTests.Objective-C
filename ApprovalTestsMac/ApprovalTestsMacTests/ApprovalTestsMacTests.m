@@ -206,7 +206,7 @@
     FileApprover *fa = [[FileApprover alloc]init];
     Namer *namer = [[Namer alloc] init];
     StringWriter *sw = [[StringWriter alloc] init];
-    [sw WriteReceivedFile:[namer getBasename:3] :@"beyond compare text content"];
+    [sw WriteReceivedFile:[namer getBasename:3] :@"beyond compare text content!"];
     BeyondCompareReporter *reporter = [[BeyondCompareReporter alloc]init];
     NSString *error = [fa verify:namer :sw :reporter];
     XCTAssertEqualObjects(@"none", error);
@@ -217,7 +217,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@"BEYONDCOMPARE" forKey:@"diffReporter"];
     [defaults synchronize];
-    [Approvals verify:@"Beyond Compare Reporter test with NSUserDefaults"];
+    [Approvals verify:@"Beyond Compare Reporter test with NSUserDefaults!"];
 }
 
 - (void)testAraxisMergeReporter

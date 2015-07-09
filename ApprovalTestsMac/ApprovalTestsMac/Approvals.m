@@ -30,6 +30,7 @@
     NSString* baseName = [namer getBasename:4];
     NSObject *reporter;
     reporter = [[ReceivedFileLauncherReporter alloc]init];
+    
     if([firstName isEqualToString:@"KALEIDOSCOPE"])
     {
         reporter = [[KaleidoscopeReporter alloc]init];

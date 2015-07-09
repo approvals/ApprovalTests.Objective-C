@@ -8,12 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		7F9FAB0BC416C3994CEE6450 /* Approvals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9FA1608D15D6AF26A7432D /* Approvals.m */; };
+		E72AB0521B4DDBEF002A5D11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F50CAC182198DA0081331E /* Foundation.framework */; };
+		E72AB0531B4DDD07002A5D11 /* DeltaWalkerReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7EA08351B45895000F17239 /* DeltaWalkerReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB0541B4DDD07002A5D11 /* Approvals.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F9FA812C395A817A680991B /* Approvals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB0551B4DDD07002A5D11 /* Namer.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F50CE8182199D80081331E /* Namer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB0561B4DDD07002A5D11 /* FileApprover.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F50CDB182199C90081331E /* FileApprover.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB0571B4DDD07002A5D11 /* ReceivedFileLauncherReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F50CDD182199C90081331E /* ReceivedFileLauncherReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB0581B4DDD07002A5D11 /* KaleidoscopeReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7DB1F441B40C8F400C90402 /* KaleidoscopeReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB0591B4DDD07002A5D11 /* BeyondCompareReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7EA08291B4386ED00F17239 /* BeyondCompareReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB05A1B4DDD08002A5D11 /* DiffMergeReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7EA08321B44A01400F17239 /* DiffMergeReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB05B1B4DDD08002A5D11 /* P4MergeReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7EA082F1B448D5C00F17239 /* P4MergeReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB05C1B4DDD08002A5D11 /* AraxisMergeReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7EA082C1B443CF000F17239 /* AraxisMergeReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB05D1B4DDD08002A5D11 /* Reporter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F50CDF182199C90081331E /* Reporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB05E1B4DDD08002A5D11 /* StringWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F50CE0182199C90081331E /* StringWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB05F1B4DDD08002A5D11 /* TestingReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F50CE2182199C90081331E /* TestingReporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E72AB0611B4DDD47002A5D11 /* DeltaWalkerReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA08361B45895000F17239 /* DeltaWalkerReporter.m */; };
+		E72AB0621B4DDD47002A5D11 /* Approvals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9FA1608D15D6AF26A7432D /* Approvals.m */; };
+		E72AB0631B4DDD47002A5D11 /* Namer.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F50CE9182199D80081331E /* Namer.m */; };
+		E72AB0641B4DDD47002A5D11 /* FileApprover.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F50CDC182199C90081331E /* FileApprover.m */; };
+		E72AB0651B4DDD47002A5D11 /* ReceivedFileLauncherReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F50CDE182199C90081331E /* ReceivedFileLauncherReporter.m */; };
+		E72AB0661B4DDD47002A5D11 /* KaleidoscopeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB1F421B40C8CC00C90402 /* KaleidoscopeReporter.m */; };
+		E72AB0671B4DDD47002A5D11 /* BeyondCompareReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA082A1B4386ED00F17239 /* BeyondCompareReporter.m */; };
+		E72AB0681B4DDD47002A5D11 /* DiffMergeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA08331B44A01400F17239 /* DiffMergeReporter.m */; };
+		E72AB0691B4DDD47002A5D11 /* P4MergeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA08301B448D5C00F17239 /* P4MergeReporter.m */; };
+		E72AB06A1B4DDD47002A5D11 /* AraxisMergeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA082D1B443CF000F17239 /* AraxisMergeReporter.m */; };
+		E72AB06B1B4DDD47002A5D11 /* StringWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F50CE1182199C90081331E /* StringWriter.m */; };
+		E72AB06C1B4DDD47002A5D11 /* TestingReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F50CE3182199C90081331E /* TestingReporter.m */; };
+		E72AB06E1B4DDDAE002A5D11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7F50CB0182198DA0081331E /* InfoPlist.strings */; };
+		E72AB06F1B4DE374002A5D11 /* ApprovalTestsMacFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = E7EA08451B4D7B7B00F17239 /* ApprovalTestsMacFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7DB1F431B40C8CC00C90402 /* KaleidoscopeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB1F421B40C8CC00C90402 /* KaleidoscopeReporter.m */; };
 		E7EA082B1B4386ED00F17239 /* BeyondCompareReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA082A1B4386ED00F17239 /* BeyondCompareReporter.m */; };
 		E7EA082E1B443CF000F17239 /* AraxisMergeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA082D1B443CF000F17239 /* AraxisMergeReporter.m */; };
 		E7EA08311B448D5C00F17239 /* P4MergeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA08301B448D5C00F17239 /* P4MergeReporter.m */; };
 		E7EA08341B44A01400F17239 /* DiffMergeReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA08331B44A01400F17239 /* DiffMergeReporter.m */; };
 		E7EA08371B45895000F17239 /* DeltaWalkerReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA08361B45895000F17239 /* DeltaWalkerReporter.m */; };
+		E7EA08551B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA08541B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests.m */; };
+		E7EA08591B4D7B7C00F17239 /* ApprovalTestsMacFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7EA08411B4D7B7B00F17239 /* ApprovalTestsMacFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7F50CA8182198DA0081331E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F50CA7182198DA0081331E /* Cocoa.framework */; };
 		E7F50CB2182198DA0081331E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7F50CB0182198DA0081331E /* InfoPlist.strings */; };
 		E7F50CB4182198DA0081331E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F50CB3182198DA0081331E /* main.m */; };
@@ -33,6 +63,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E7EA084D1B4D7B7C00F17239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7F50C9C182198DA0081331E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7EA08401B4D7B7B00F17239;
+			remoteInfo = ApprovalTestsMacFramework;
+		};
+		E7EA084F1B4D7B7C00F17239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7F50C9C182198DA0081331E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F50CA3182198DA0081331E;
+			remoteInfo = ApprovalTestsMac;
+		};
+		E7EA08561B4D7B7C00F17239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7F50C9C182198DA0081331E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7EA08401B4D7B7B00F17239;
+			remoteInfo = ApprovalTestsMacFramework;
+		};
 		E7F50CC9182198DA0081331E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E7F50C9C182198DA0081331E /* Project object */;
@@ -41,6 +92,29 @@
 			remoteInfo = ApprovalTestsMac;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E7EA085F1B4D7B7C00F17239 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E7EA08591B4D7B7C00F17239 /* ApprovalTestsMacFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7EA08611B4D7D6400F17239 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7F9FA1608D15D6AF26A7432D /* Approvals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Approvals.m; sourceTree = "<group>"; };
@@ -57,6 +131,12 @@
 		E7EA08331B44A01400F17239 /* DiffMergeReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiffMergeReporter.m; sourceTree = "<group>"; };
 		E7EA08351B45895000F17239 /* DeltaWalkerReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeltaWalkerReporter.h; sourceTree = "<group>"; };
 		E7EA08361B45895000F17239 /* DeltaWalkerReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeltaWalkerReporter.m; sourceTree = "<group>"; };
+		E7EA08411B4D7B7B00F17239 /* ApprovalTestsMacFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApprovalTestsMacFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7EA08441B4D7B7B00F17239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7EA08451B4D7B7B00F17239 /* ApprovalTestsMacFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApprovalTestsMacFramework.h; sourceTree = "<group>"; };
+		E7EA084B1B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprovalTestsMacFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7EA08531B4D7B7C00F17239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7EA08541B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApprovalTestsMacFrameworkTests.m; sourceTree = "<group>"; };
 		E7F50CA4182198DA0081331E /* ApprovalTestsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApprovalTestsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F50CA7182198DA0081331E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E7F50CAA182198DA0081331E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -90,6 +170,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E7EA083D1B4D7B7B00F17239 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72AB0521B4DDBEF002A5D11 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7EA08481B4D7B7C00F17239 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7F50CA1182198DA0081331E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,11 +205,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7EA08421B4D7B7B00F17239 /* ApprovalTestsMacFramework */ = {
+			isa = PBXGroup;
+			children = (
+				E7EA08451B4D7B7B00F17239 /* ApprovalTestsMacFramework.h */,
+				E7EA08431B4D7B7B00F17239 /* Supporting Files */,
+			);
+			path = ApprovalTestsMacFramework;
+			sourceTree = "<group>";
+		};
+		E7EA08431B4D7B7B00F17239 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7EA08441B4D7B7B00F17239 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7EA08511B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7EA08541B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests.m */,
+				E7EA08521B4D7B7C00F17239 /* Supporting Files */,
+			);
+			path = ApprovalTestsMacFrameworkTests;
+			sourceTree = "<group>";
+		};
+		E7EA08521B4D7B7C00F17239 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7EA08531B4D7B7C00F17239 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E7F50C9B182198DA0081331E = {
 			isa = PBXGroup;
 			children = (
 				E7F50CAD182198DA0081331E /* ApprovalTestsMac */,
 				E7F50CCB182198DA0081331E /* ApprovalTestsMacTests */,
+				E7EA08421B4D7B7B00F17239 /* ApprovalTestsMacFramework */,
+				E7EA08511B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests */,
 				E7F50CA6182198DA0081331E /* Frameworks */,
 				E7F50CA5182198DA0081331E /* Products */,
 			);
@@ -125,6 +256,8 @@
 			children = (
 				E7F50CA4182198DA0081331E /* ApprovalTestsMac.app */,
 				E7F50CC5182198DA0081331E /* ApprovalTestsMacTests.xctest */,
+				E7EA08411B4D7B7B00F17239 /* ApprovalTestsMacFramework.framework */,
+				E7EA084B1B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,7 +351,68 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		E7EA083E1B4D7B7B00F17239 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72AB0531B4DDD07002A5D11 /* DeltaWalkerReporter.h in Headers */,
+				E72AB0541B4DDD07002A5D11 /* Approvals.h in Headers */,
+				E72AB0551B4DDD07002A5D11 /* Namer.h in Headers */,
+				E72AB0561B4DDD07002A5D11 /* FileApprover.h in Headers */,
+				E72AB0571B4DDD07002A5D11 /* ReceivedFileLauncherReporter.h in Headers */,
+				E72AB0581B4DDD07002A5D11 /* KaleidoscopeReporter.h in Headers */,
+				E72AB0591B4DDD07002A5D11 /* BeyondCompareReporter.h in Headers */,
+				E72AB05A1B4DDD08002A5D11 /* DiffMergeReporter.h in Headers */,
+				E72AB05B1B4DDD08002A5D11 /* P4MergeReporter.h in Headers */,
+				E72AB05C1B4DDD08002A5D11 /* AraxisMergeReporter.h in Headers */,
+				E72AB05D1B4DDD08002A5D11 /* Reporter.h in Headers */,
+				E72AB05E1B4DDD08002A5D11 /* StringWriter.h in Headers */,
+				E72AB06F1B4DE374002A5D11 /* ApprovalTestsMacFramework.h in Headers */,
+				E72AB05F1B4DDD08002A5D11 /* TestingReporter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		E7EA08401B4D7B7B00F17239 /* ApprovalTestsMacFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7EA085E1B4D7B7C00F17239 /* Build configuration list for PBXNativeTarget "ApprovalTestsMacFramework" */;
+			buildPhases = (
+				E7EA083C1B4D7B7B00F17239 /* Sources */,
+				E7EA083D1B4D7B7B00F17239 /* Frameworks */,
+				E7EA083E1B4D7B7B00F17239 /* Headers */,
+				E7EA083F1B4D7B7B00F17239 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApprovalTestsMacFramework;
+			productName = ApprovalTestsMacFramework;
+			productReference = E7EA08411B4D7B7B00F17239 /* ApprovalTestsMacFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E7EA084A1B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7EA08601B4D7B7C00F17239 /* Build configuration list for PBXNativeTarget "ApprovalTestsMacFrameworkTests" */;
+			buildPhases = (
+				E7EA08471B4D7B7C00F17239 /* Sources */,
+				E7EA08481B4D7B7C00F17239 /* Frameworks */,
+				E7EA08491B4D7B7C00F17239 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7EA084E1B4D7B7C00F17239 /* PBXTargetDependency */,
+				E7EA08501B4D7B7C00F17239 /* PBXTargetDependency */,
+			);
+			name = ApprovalTestsMacFrameworkTests;
+			productName = ApprovalTestsMacFrameworkTests;
+			productReference = E7EA084B1B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E7F50CA3182198DA0081331E /* ApprovalTestsMac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7F50CD5182198DA0081331E /* Build configuration list for PBXNativeTarget "ApprovalTestsMac" */;
@@ -226,10 +420,13 @@
 				E7F50CA0182198DA0081331E /* Sources */,
 				E7F50CA1182198DA0081331E /* Frameworks */,
 				E7F50CA2182198DA0081331E /* Resources */,
+				E7EA085F1B4D7B7C00F17239 /* Embed Frameworks */,
+				E7EA08611B4D7D6400F17239 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E7EA08571B4D7B7C00F17239 /* PBXTargetDependency */,
 			);
 			name = ApprovalTestsMac;
 			productName = ApprovalTestsMac;
@@ -263,6 +460,13 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Aaron Griffith";
 				TargetAttributes = {
+					E7EA08401B4D7B7B00F17239 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					E7EA084A1B4D7B7C00F17239 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = E7F50CA3182198DA0081331E;
+					};
 					E7F50CC4182198DA0081331E = {
 						TestTargetID = E7F50CA3182198DA0081331E;
 					};
@@ -283,11 +487,28 @@
 			targets = (
 				E7F50CA3182198DA0081331E /* ApprovalTestsMac */,
 				E7F50CC4182198DA0081331E /* ApprovalTestsMacTests */,
+				E7EA08401B4D7B7B00F17239 /* ApprovalTestsMacFramework */,
+				E7EA084A1B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E7EA083F1B4D7B7B00F17239 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72AB06E1B4DDDAE002A5D11 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7EA08491B4D7B7C00F17239 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7F50CA2182198DA0081331E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,6 +531,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E7EA083C1B4D7B7B00F17239 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72AB0611B4DDD47002A5D11 /* DeltaWalkerReporter.m in Sources */,
+				E72AB0621B4DDD47002A5D11 /* Approvals.m in Sources */,
+				E72AB0631B4DDD47002A5D11 /* Namer.m in Sources */,
+				E72AB0641B4DDD47002A5D11 /* FileApprover.m in Sources */,
+				E72AB0651B4DDD47002A5D11 /* ReceivedFileLauncherReporter.m in Sources */,
+				E72AB0661B4DDD47002A5D11 /* KaleidoscopeReporter.m in Sources */,
+				E72AB0671B4DDD47002A5D11 /* BeyondCompareReporter.m in Sources */,
+				E72AB0681B4DDD47002A5D11 /* DiffMergeReporter.m in Sources */,
+				E72AB0691B4DDD47002A5D11 /* P4MergeReporter.m in Sources */,
+				E72AB06A1B4DDD47002A5D11 /* AraxisMergeReporter.m in Sources */,
+				E72AB06B1B4DDD47002A5D11 /* StringWriter.m in Sources */,
+				E72AB06C1B4DDD47002A5D11 /* TestingReporter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7EA08471B4D7B7C00F17239 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7EA08551B4D7B7C00F17239 /* ApprovalTestsMacFrameworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7F50CA0182198DA0081331E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,6 +590,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E7EA084E1B4D7B7C00F17239 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7EA08401B4D7B7B00F17239 /* ApprovalTestsMacFramework */;
+			targetProxy = E7EA084D1B4D7B7C00F17239 /* PBXContainerItemProxy */;
+		};
+		E7EA08501B4D7B7C00F17239 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7F50CA3182198DA0081331E /* ApprovalTestsMac */;
+			targetProxy = E7EA084F1B4D7B7C00F17239 /* PBXContainerItemProxy */;
+		};
+		E7EA08571B4D7B7C00F17239 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7EA08401B4D7B7B00F17239 /* ApprovalTestsMacFramework */;
+			targetProxy = E7EA08561B4D7B7C00F17239 /* PBXContainerItemProxy */;
+		};
 		E7F50CCA182198DA0081331E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E7F50CA3182198DA0081331E /* ApprovalTestsMac */;
@@ -385,6 +648,117 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E7EA085A1B4D7B7C00F17239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ApprovalTestsMacFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E7EA085B1B4D7B7C00F17239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ApprovalTestsMacFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				"INSTALL_PATH[sdk=*]" = "$(LOCAL_LIBRARY_DIR)/Frameworks:@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E7EA085C1B4D7B7C00F17239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ApprovalTestsMacFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ApprovalTestsMac.app/Contents/MacOS/ApprovalTestsMac";
+			};
+			name = Debug;
+		};
+		E7EA085D1B4D7B7C00F17239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ApprovalTestsMacFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ApprovalTestsMac.app/Contents/MacOS/ApprovalTestsMac";
+			};
+			name = Release;
+		};
 		E7F50CD3182198DA0081331E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -461,6 +835,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ApprovalTestsMac/ApprovalTestsMac-Prefix.pch";
 				INFOPLIST_FILE = "ApprovalTestsMac/ApprovalTestsMac-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -474,6 +849,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ApprovalTestsMac/ApprovalTestsMac-Prefix.pch";
 				INFOPLIST_FILE = "ApprovalTestsMac/ApprovalTestsMac-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -522,6 +898,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E7EA085E1B4D7B7C00F17239 /* Build configuration list for PBXNativeTarget "ApprovalTestsMacFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7EA085A1B4D7B7C00F17239 /* Debug */,
+				E7EA085B1B4D7B7C00F17239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7EA08601B4D7B7C00F17239 /* Build configuration list for PBXNativeTarget "ApprovalTestsMacFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7EA085C1B4D7B7C00F17239 /* Debug */,
+				E7EA085D1B4D7B7C00F17239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7F50C9F182198DA0081331E /* Build configuration list for PBXProject "ApprovalTestsMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

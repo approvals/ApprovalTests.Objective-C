@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ApprovalTestsMac.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E7EA084A1B4D7B7C00F17239"
+               BuildableName = "ApprovalTestsMacFrameworkTests.xctest"
+               BlueprintName = "ApprovalTestsMacFrameworkTests"
+               ReferencedContainer = "container:ApprovalTestsMac.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,6 +49,16 @@
                BlueprintIdentifier = "E7F50CC4182198DA0081331E"
                BuildableName = "ApprovalTestsMacTests.xctest"
                BlueprintName = "ApprovalTestsMacTests"
+               ReferencedContainer = "container:ApprovalTestsMac.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E7EA084A1B4D7B7C00F17239"
+               BuildableName = "ApprovalTestsMacFrameworkTests.xctest"
+               BlueprintName = "ApprovalTestsMacFrameworkTests"
                ReferencedContainer = "container:ApprovalTestsMac.xcodeproj">
             </BuildableReference>
          </TestableReference>
