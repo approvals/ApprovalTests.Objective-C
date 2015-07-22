@@ -1,0 +1,14 @@
+PODS:
+  - ApprovalsObjcOsx (0.1.0)
+
+DEPENDENCIES:
+  - ApprovalsObjcOsx (from `../`)
+
+EXTERNAL SOURCES:
+  ApprovalsObjcOsx:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ApprovalsObjcOsx: 664722ef23320e1c745842f138670a6ff02f284f
+
+COCOAPODS: 0.37.2

@@ -1,0 +1,6 @@
+framework module ApprovalsObjcOsx {
+  umbrella header "Pods-ApprovalsObjcOsx_Tests-ApprovalsObjcOsx-umbrella.h"
+
+  export *
+  module * { export * }
+}
