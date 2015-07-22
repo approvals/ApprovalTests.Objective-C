@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>143C8300-3549-4941-A1FD-D5F0711EC20E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>ApprovalTestsMac</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4EDD360AD04C78B70CAEB88069AE28274DCB9DC7</key>
 		<string>https://github.com/approvals/ApprovalTests.Objective-C.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ApprovalTestsMac/ApprovalTestsMac.xcodeproj</string>
+	<string>ApprovalTestsMac/ApprovalTestsMac.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4EDD360AD04C78B70CAEB88069AE28274DCB9DC7</key>

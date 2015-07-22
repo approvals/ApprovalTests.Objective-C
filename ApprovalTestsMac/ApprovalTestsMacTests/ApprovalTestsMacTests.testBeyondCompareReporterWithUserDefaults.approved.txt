@@ -1,1 +1,0 @@
-Beyond Compare Reporter test with NSUserDefaults

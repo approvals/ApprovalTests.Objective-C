@@ -49,7 +49,11 @@
 
 
 - (NSString*)getBasename:(int) depth{
-    NSString *directoryName = [[NSString stringWithFormat:@"%s", __FILE__] stringByDeletingLastPathComponent];
+    NSLog(@"%s", __FILE__);
+    NSLog(@"%@", [[NSBundle mainBundle] bundlePath]);
+    NSLog(@"%@", [[NSFileManager defaultManager] currentDirectoryPath]);
+  //  NSString *directoryName = [[NSString stringWithFormat:@"%s", __FILE__] stringByDeletingLastPathComponent];
+    NSString *directoryName = [[NSFileManager defaultManager] currentDirectoryPath];
     NSString *className = [self getClassNameFromClass:depth];
     NSString *methodName = [self getMethodNameFromMethod:depth];
     baseName = [NSString stringWithFormat:@"%@/%@.%@", directoryName, className,methodName];
